@@ -24,6 +24,14 @@ img{
     width: 100%
 }
 
+ul{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
 `;
 
 export default GlobalStyles;
