@@ -118,6 +118,9 @@ const NavStyled = styled.nav`
   }
 
   @media screen and (max-width: ${({ theme }) => theme.mobile}) {
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
     .nav-lg {
       display: none;
     }
@@ -128,6 +131,7 @@ const NavStyled = styled.nav`
 
     .ham {
       display: inline-block;
+      cursor: pointer;
     }
 
     .overlay {

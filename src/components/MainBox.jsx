@@ -4,11 +4,17 @@ import databiz from "../assets/images/client-databiz.svg";
 import audio from "../assets/images/client-audiophile.svg";
 import meet from "../assets/images/client-meet.svg";
 import maker from "../assets/images/client-maker.svg";
+import imgMobile from "../assets/images/image-hero-mobile.png";
+import imgDesktop from "../assets/images/image-hero-desktop.png";
 
 const MainBox = () => {
   return (
     <MainBoxStyled>
-      <img src="" alt="" className="main-img" />
+      <div className="main-img">
+        <img src={imgMobile} alt="" className="mobile-img" />
+        <img src={imgDesktop} alt="" className="desktop-img" />
+      </div>
+
       <div className="text">
         <h1>Make remote work</h1>
         <p>

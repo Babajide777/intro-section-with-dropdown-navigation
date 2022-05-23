@@ -8,6 +8,7 @@ import planning from "../assets/images/icon-planning.svg";
 import down from "../assets/images/icon-arrow-down.svg";
 import menu from "../assets/images/icon-menu.svg";
 import close from "../assets/images/icon-close-menu.svg";
+import up from "../assets/images/icon-arrow-up.svg";
 import { useState } from "react";
 
 const Nav = () => {
