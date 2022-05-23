@@ -10,6 +10,10 @@ const NavStyled = styled.nav`
     opacity: 0.6;
   }
 
+  .nav-link:hover > a {
+    opacity: 1;
+  }
+
   a {
     color: ${({ theme }) => theme.color.almostBlack};
   }
@@ -70,7 +74,10 @@ const NavStyled = styled.nav`
         flex-direction: column;
         gap: 0.5rem;
         box-shadow: 0 0 4px #aaa;
-        display: none;
+
+        li:hover {
+          background-color: rgba(0, 0, 0, 0.4);
+        }
       }
 
       .company-dropdown {
@@ -85,18 +92,11 @@ const NavStyled = styled.nav`
         flex-direction: column;
         gap: 0.2rem;
         box-shadow: 0 0 4px #ccc;
-        display: none;
+
+        li:hover {
+          background-color: rgba(0, 0, 0, 0.4);
+        }
       }
-    }
-
-    .start-nav-links li:first-of-type:hover .feature-dropdown {
-      display: inline-block;
-      transition: all 5s;
-    }
-
-    .start-nav-links li:nth-of-type(2):hover .company-dropdown {
-      display: inline-block;
-      transition: all 5s;
     }
 
     .end-nav-links {
@@ -139,8 +139,11 @@ const NavStyled = styled.nav`
       height: 100vh;
       width: 100vw;
       z-index: 3;
+      left: 0;
       top: 0;
+      right: 0;
       background-color: rgba(0, 0, 0, 0.4);
+      animation: navSlide 2s ease 1 forwards;
     }
 
     .together {
@@ -166,10 +169,18 @@ const NavStyled = styled.nav`
 
       li a {
         opacity: 0.7;
+        cursor: pointer;
       }
 
       .nav-link {
         text-align: center;
+        margin-top: 1.5rem;
+
+        .register {
+          border: 1px solid #000;
+          padding: 0.5rem 2rem;
+          border-radius: 10px;
+        }
       }
 
       .nav-link:first-of-type {
@@ -183,8 +194,26 @@ const NavStyled = styled.nav`
       }
     }
 
+    .feature-dropdown,
+    .company-dropdown {
+      margin-top: 1rem;
+      margin-left: 2rem;
+    }
+
     .show {
       display: block;
+    }
+
+    @keyframes navSlide {
+      from {
+        transform: translateX(100%);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateX(0);
+        opacity: 1;
+      }
     }
   }
 `;
