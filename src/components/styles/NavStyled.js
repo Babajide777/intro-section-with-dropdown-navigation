@@ -67,7 +67,7 @@ const NavStyled = styled.nav`
         background-color: #fff;
         right: 0.5rem;
         top: 2rem;
-        width: 8.5rem;
+        width: 9.5rem;
         padding: 1rem;
         border-radius: 10px;
         display: flex;
@@ -85,7 +85,7 @@ const NavStyled = styled.nav`
         background-color: #fff;
         right: 0.5rem;
         top: 2rem;
-        width: 7rem;
+        width: 8rem;
         padding: 1rem;
         border-radius: 10px;
         display: flex;
